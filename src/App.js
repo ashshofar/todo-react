@@ -7,8 +7,7 @@ class App extends Component {
   componentDidMount() {
     let myData = sessionStorage.getItem('myData')
 
-
-    if(myData !== '') {
+    if(myData) {
       this.setState({
         items: JSON.parse(myData)
       })
