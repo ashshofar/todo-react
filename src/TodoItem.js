@@ -25,9 +25,14 @@ class TodoItem extends Component {
     }
     render() {
         const todoEntries = this.props.entries
-        const listItems = todoEntries.map(this.createTasks)
 
-        return <ul className="theList">{listItems}</ul>
+        if(todoEntries) {
+            const listItems = todoEntries.map(this.createTasks)
+    
+            return <ul className="theList">{listItems}</ul>
+        }
+        
+        return <ul className="theList"> Kosong </ul>
     }
 }
 
